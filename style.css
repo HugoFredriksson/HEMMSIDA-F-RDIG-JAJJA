@@ -1,0 +1,150 @@
+body {
+    background-color: rgba(83, 66, 66, 0.733); /* bakgrunds färg till hemsidan */
+    margin: 0;          /* Distans mellan alla objekt i bodyn */
+    font-family: Arial, Helvetica, sans-serif;  /* Text stil i bodyn */
+    font-weight: 300;    /* Hur tjock eller tunn texten är */
+}
+.grid-container { /* Namn på class*/
+    display: grid; /* Visa det hära som en grid */
+    grid-template-areas: /* Positioner för class i grid */
+      'Header Header Header Header Header Header'
+      'Menu Text1 Text1 Text1 Text1 Text1'
+      'Menu Text2 Text2 Text2 Text2 Text2'
+      'Menu Text3 Text3 Text3 Text3 Text3'
+      'Menu Text4 Text4 Text4 Text4 Text4';
+    grid-gap: 10px; /* Mellan rum per cell */
+    background-color: rgb(80, 74, 74); /* Bakgrundsfärg */
+    padding: 10px; /* Kudde runt text */
+}
+.grid-container > div { /* Div inuti class grid-container */
+    background-color: white; /* Bakgrundsfärg */
+    text-align: center; /* Text i mitten */
+    padding: 20px; /* Kudde */ 
+    font-size: 30px; /* Storlek på text */
+}
+.sak1 { /* Namn på class */
+    grid-area: Header; /* Namn i grid-template-areas */
+}
+.sak2 {
+    grid-area: Menu;  /* Namn i grid-template-areas */
+    width:8vh; /* 8 Viewheight bredd */
+    background-image: url(bild1.png); /* Bild som bakgrund */
+    background-repeat: no-repeat; /* Bakgrunden ska endast visas en gång */
+    background-size: 80px; /* Bakgrundens storlek */
+}
+.sak3 { /* Namn på class */ 
+    grid-area: Text1; /* Namn i grid-template-areas */ 
+}
+.sak4 { /* Namn på class */
+    grid-area: Text2; /* Namn i grid-template-areas */
+}
+.sak5 { /* Namn på class */
+    grid-area: Text3; /* Namn i grid-template-areas */ 
+}
+.sak6 { /* Namn på class */
+    grid-area: Text4; /* Namn i grid-template-areas */
+}
+.text > div {   /* Inuti classen "text" finns divs och med detta så kan man hantera de */
+    background: rgb(145, 144, 142); /* bakgrunds färd */
+    padding: 1em; /* En kudde som gör själva bakrunden texten är på större */
+}
+.text > div:nth-child(odd) { /* Varannan div i classen text */
+    background-color: darkgray; /* Bakgrunds färg */
+}
+.text {  /* Classen text */
+    height: 100vh; /* Höjd */
+    width: 100vh; /* Bredd */
+    font-family: sans-serif; /* Vilken font */
+    font-weight: bold; /* Tjocj text */
+    display: grid; /* Säger att denna ska visas som en grid */
+    grid-template-columns: 25% 25% 25% 25%; /* alla olika divs i classen text ska ta upp 25% var */
+}
+.container {    /* En class med namnet container som innehåller navigations saken längst upp på skärmen */
+    width: 80%;   /* Bredden på ett element */
+    margin: 0 auto;    /* Distans mellan alla objekt i containern */
+}
+header {   /* En tag som hanterar navbaren vilket är saken längst upp på skärmen */
+    background:white; /* Bakgrundsfärg */
+    box-shadow: 1px 2px 88px 10px; /* Skugga runt header */
+}
+.logo {    /* Loggan längst upp åt vänster på skärmen */
+    padding-top: 10px;   /* 10 pixlars bredd padding från toppen av skärmen */
+    float: right;  /* Loggan ska flyta på vänster sida av containers */
+}
+nav {   /* En nav tag och i den så finns texten som man kan klicka på */
+    float:right;  /* Får texten i denna tag att flyta på vänster sida av containern som finns längst upp på sidan */  
+}
+nav ul {  /*  Taggen som hanterar själva navbaren som är längst upp på skärmen */
+    margin: 0;  /* Ser till att distansen från toppen inte orsakar problem senare typ */
+    padding: 0;  /* Ser till att navbaren håller sig i rätt storlek */
+    list-style: none; /* Tar bort en punkt jämte texten som finns vanligen */
+}
+nav li {  /*Taggen som hanterar texten i navbaren */
+    display: inline-block;  /* Låter mig att hantera bredden och höjden av texten i detta fallet */
+    margin-left: 110px;  /* Distansen mellan objekten från vänster sida */
+    padding-top: 27.8px;  /* En kudde som är runt objekten  i detta fallet från toppen */
+    padding-bottom: 10px; /* Kudden som är runt objekten och i detta fallet från botten */
+    text-align: center;  /* Texten säts i mitten */
+}
+h1 {  /* En tag med text och detta är ettan vilket betyder att den är störst och är en rubrik */
+    text-align: center;  /* Ser till att texten är i mitten */
+}
+p {   /* En text tag som används som brödtext */
+    text-align: center;  /* Ser till att texten är i mitten */
+}
+a:hover {  /* Påverkar hur saker ser ut när muspekaren är över den */
+    color: rgb(35, 134, 192); /* Färgen ändras när muspekaren är över denna text */
+}
+nav a {  /* En specifik <a> tag som finns i <nav> taggen */
+    text-transform: uppercase; /* Gör så att texten blir uppercase */
+    text-decoration: none; /* Tar bort sträcket som vanligtvis finns på botten av denna sorts text */
+    font-size: 22px; /* Storleken på texten */
+}
+.mitten {  /* En generell class som jag använder på flera olika saker som sätter saken och ting i mitten av sidan */
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.text1 {  /* Gör en viss text vit */
+    color:white;  /* Vit färg */
+}
+.border {  /* En generell class som sätter en border runt omkring det objektet man väljer att sätta denna class på */
+    border: 5px solid; /* Bordern är 5 pixlar och är ett rak */
+}
+.burger {  /* En class som sätter några bilder i mitten */
+    text-align: center;  /* Gör att de är i mitten */
+}
+.borgir {  /* Text på gallery sida */
+    font-size: 25px; /* Storlek på text */
+}
+table, th, td{ /* Taggar i tabell */
+    border: 2px solid black; /* En border runt tabellen */
+    border-collapse: collapse; /* Bordern faller ihop till ett sträck */
+    box-shadow: 0px 1px 25px 0; /* Skugga runt border */
+}
+th { /* Tag för tabelheader */
+    width: 300px;  /* Höjd */
+    height: 40px; /* Bredd */
+}
+td:nth-child(2n) { /* Varannan td tagg */
+    background-color: brown; /* Bakgrundsfärg */
+}
+td:nth-child(odd) { /* Varannan annan td tagg */
+    background-color: chartreuse; /* Bakgrundsfärg */
+}
+th:nth-child(1n) { /* Alla i th */
+    background-color: cyan; /* Bakgrundsfärg */
+}
+.namn { /* Namn på class */
+    position: fixed; /* Position på sida */
+    bottom: 15px; /* Botten på sidan */
+    background-color: darkgray; /* Bakgrundsfärg */
+    padding-left: 10px; /* Kudde på vänster sida */
+    padding-right: 10px; /* Kudde på höger sida */
+    box-shadow: 10px 10px 60px 10px; /* Skugga */
+}
+div > p > a { /* a tag inuti p tag inuti div tag */
+    text-decoration:none; /* Ingen text dekoration */
+    color: black; /* Färg */
+}
